@@ -1,0 +1,17 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: auth
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.31.166:8848
+        cluster-name: test2
+      config:
+        server-addr: 192.168.31.166:8848
+        file-extension: yml
+    sentinel:
+      transport:
+        dashboard: 192.168.31.166:8718
+      eager: true

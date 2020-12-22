@@ -1,0 +1,71 @@
+app:
+  id: gateway                           #应用ID
+apollo:
+  meta: http://192.168.31.166:8080            #DEV环境配置中心地址
+  autoUpdateInjectedSpringProperties: true   #是否开启 Spring 参数自动更新
+  bootstrap:
+    enabled: true                            #是否开启 Apollo
+    namespaces: application                  #设置 Namespace
+    eagerLoad:
+      enabled: false                         #将 Apollo 加载提到初始化日志系统之前
+
+logging:
+  config: classpath:logback-spring.xml
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+  security:
+    oauth2:
+      jwt:
+        signingKey: test-cloud
+  boot:
+    admin:
+      client:
+        url: http://127.0.0.1:8042
+#  datasource:
+#    url: jdbc:mysql://192.168.31.187:3306/sc_auth?autoReconnect=true&useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&useSSL=false
+#    username: root
+#    password: root
+#    driver-class-name: com.mysql.jdbc.Driver
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      db1: # 主数据源
+        driverClassName: com.mysql.jdbc.Driver
+        username: root
+        password: root
+        url: jdbc:mysql://192.168.31.187:3306/db1?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+      db2: # 从数据源
+        driverClassName: com.mysql.jdbc.Driver
+        username: root
+        password: root
+        url: jdbc:mysql://192.168.31.187:3306/db2?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  typeAliasesPackage: com.sparticles.common.model
+gate:
+  ignore:
+    authentication:
+      startWith: /oauth,/open
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    tags:
+      application: gateway
+
+
+
+
+
+

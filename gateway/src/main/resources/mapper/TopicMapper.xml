@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparticles.gateway.dao.TopicMapper">
+
+    <!-- 映射表字段与实体类属性 -->
+    <resultMap id="BaseResultMap" type="com.sparticles.common.model.Topic">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <id column="title" jdbcType="VARCHAR" property="title"/>
+        <id column="content" jdbcType="VARCHAR" property="content"/>
+        <id column="tag" jdbcType="VARCHAR" property="tag"/>
+        <id column="in_time" jdbcType="DATE" property="inTime"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, title, content, tag, in_time
+    </sql>
+
+    <!-- 自定义查询方法 -->
+    <select id="selectByTitle" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List"/> from topic where title = '${title}'
+    </select>
+</mapper>

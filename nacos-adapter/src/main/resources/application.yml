@@ -1,0 +1,14 @@
+server:
+  port: 8066
+spring:
+  application:
+    name: nacos-consul-adapter
+        
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  metrics:
+    tags:
+      application: ${spring.application.name}
