@@ -1,0 +1,2 @@
+# cloud-center
+基于Springboot2.1.x以及SpringCloud Greenwich.SR6的微服务开发脚手架。脚手架中集成了nacos，oauth2，多数据源配置，gateway网关，sentinel，Prometheus适配nacos模块。分布式一致性使用的是seata。分布式链路使用的skywalking。微服务监控使用的是springboot-admin，Prometheus，Alertmanager，Grafana。关于各种链路监控一致性等会将相关使用和部署文档写在README中。
