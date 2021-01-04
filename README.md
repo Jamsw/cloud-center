@@ -31,10 +31,6 @@
 |  日志收集中间件  |   logstash       |   4560    |  [安装与使用文档](./docs/logstash.md)     |
 |  分布式配置中心  |   Apollo       |    8070   |  [安装与使用文档](./docs/Apollo.md)     |
 |  高可用防护组件  |   sentinel       |   8718    |  [安装与使用文档](./docs/sentinel.md)     |
-|  告警发送中间件  |   Alertmanager       |   9093    |  [安装与使用文档](./docs/Alertmanager.md)     |
-|  监控度量分析与可视化套件  |   Grafana       |   3000    |  [安装与使用文档](./docs/Grafana.md)     |
-|  监控系统  |   prometheus       |   9090    |  [安装与使用文档](./docs/prometheus.md)     |
-|  微服务监控  |   admin-server       |   8042    |  [安装与使用文档](./docs/admin-server.md)     |
 
 * 2.新增数据库及表结构
 
