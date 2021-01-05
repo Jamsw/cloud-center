@@ -33,7 +33,7 @@
 |  高可用防护组件  |   sentinel       |   8718    |  [安装与使用文档](./docs/sentinel.md)     |
 
 * 2.新增数据库及表结构
-
+目录路径都在：子项目/db
 
 * 3.脚手架模块介绍
 
@@ -46,6 +46,4 @@
 |  gateway  |  网关    |  http://localhost:8071  | [文档](./gateway/readme.md)         |
 |  monitor  |  微服务监控    |  http://localhost:8071  | [文档](./monitor/readme.md)         |
 |  nacos-adapter  |   prometheus适配nacos服务中心   |  http://localhost:8071  | [文档](./nacos-adapter/readme.md)         |
-
-* 4.案例示意图
 
