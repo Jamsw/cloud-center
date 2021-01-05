@@ -9,7 +9,7 @@
 
 服务调用授权与认证时序如下
 
-![架构图](../docs/auth.png)
+![架构图](../docs/img/auth.png)
 
 ### OAuth2简介:
 
